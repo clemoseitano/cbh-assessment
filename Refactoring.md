@@ -9,3 +9,7 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+The function is to return a SHA3-512 has of a suitably long message. 
+Therefore any message that is of shorter length can be ignore and the function exited with the `TRIVIAL_PARTITION_KEY`.
+When a suitably long message has a `partionKey` field, we intend to return the hex of the hash if the `partitionKey` is of the suitable length else we return `TRIVIAL_PARTITION_KEY`.
+The final stage is to return the hex of the hash if the message is suitably long.
